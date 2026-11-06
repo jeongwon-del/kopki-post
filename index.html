@@ -12,14 +12,14 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1f1e1c;--paper:#2a2926;--ink:#eeebe5;--sub:#a29d94;--line:#3b3935;--hl:#8a7514;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#1f1e1c;--paper:#2a2926;--ink:#eeebe5;--sub:#a29d94;--line:#3b3935;--hl:#8a7514;color-scheme:dark}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans)}
-.wrap{max-width:1180px;margin:0 auto;padding-block:40px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1180px;margin:0 auto;min-height:100vh;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-block:40px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--sub);text-transform:uppercase}
 h1{font-size:24px;font-weight:700;margin:8px 0 6px;text-wrap:balance}
 h1 mark{background:linear-gradient(transparent 58%,var(--hl) 58%);color:inherit;padding:0 2px}
-.meta{font-size:14px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
+.meta{font-size:14px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:center}
 .meta a{color:var(--ink);text-underline-offset:3px}
-.strip{margin-top:28px;display:flex;gap:14px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
-.card{flex:0 0 auto;width:200px;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit}
+.strip{margin-top:28px;display:flex;gap:14px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;max-width:100%;justify-content:safe center}
+.card{flex:0 0 auto;width:200px;text-align:left;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit}
 .card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border:1px solid var(--line);background:var(--paper);transition:transform .15s}
 .card:hover img,.card:focus-visible img{transform:translateY(-3px)}
 .card:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
